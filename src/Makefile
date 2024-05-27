@@ -3,8 +3,10 @@ CFLAGS= -Wall -Wextra -Werror
 ARGS=
 LEAKS=leaks
 GREPARGS=Nya text
+grep=./grep
 
 test: s21_grep
+	chmod 755 $(grep)/s21_grep
 	$(CC) $(CFLAGS) -g -o test.out ./test.c
 	./test.out
 
